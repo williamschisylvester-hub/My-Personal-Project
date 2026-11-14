@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Review the items in your Natan-Shield's-Limited shopping cart.">
+    <title>Your Cart - Natan-Shield's-Limited</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <a href="index.html">★ Sell on Natan-Shield's-Limited</a>
+            <div class="top-links">
+                <span>Natan-Shield's-Limited</span>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container navbar">
+            <a class="logo" href="index.html">Natan-Shield's<span>Limited</span></a>
+            <div class="cart-search-note">Your shopping cart</div>
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="index.html">Continue shopping</a>
+                <a href="cart.html" aria-current="page">🛒 Cart <span class="cart-count">0</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container cart-page">
+        <p class="cart-breadcrumb"><a href="index.html">Home</a> / Cart</p>
+
+        <div class="cart-heading">
+            <div>
+                <h1>Your cart</h1>
+                <p>Review your items before checkout.</p>
+            </div>
+            <span class="cart-item-count">0 items</span>
+        </div>
+
+        <div class="cart-layout">
+            <section class="cart-items" aria-label="Items in your cart">
+                <div class="cart-items-header">
+                    <h2>Cart items</h2>
+                    <span>Price</span>
+                </div>
+
+                <div class="cart-items-list"></div>
+                <a class="cart-continue-link" href="index.html">← Continue shopping</a>
+            </section>
+
+            <aside class="cart-summary" aria-labelledby="summary-title">
+                <h2 id="summary-title">Order summary</h2>
+                <div class="cart-summary-row">
+                    <span>Subtotal (0 items)</span>
+                    <strong class="cart-subtotal">₦0</strong>
+                </div>
+                <div class="cart-summary-row">
+                    <span>Delivery</span>
+                    <span>Calculated at checkout</span>
+                </div>
+                <div class="cart-summary-total">
+                    <span>Total</span>
+                    <strong class="cart-total">₦0</strong>
+                </div>
+                <button class="cart-checkout" type="button" disabled>Checkout unavailable</button>
+                <p class="cart-checkout-note">Payment is not available in this HTML/CSS preview.</p>
+                <div class="cart-secure-note">🔒 Secure checkout would be provided by your payment service.</div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer cart-footer">
+        <div class="copyright">
+            <p>© 2026 Natan-Shield's-Limited. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
