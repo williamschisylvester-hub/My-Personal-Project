@@ -136,6 +136,79 @@ let cart = readCart();
 updateCartCounts(cart);
 renderCartPage(cart);
 
+const assetProducts = [
+    ["Laptop Computer", "Assets/images (1).jpeg", "₦450,000"],
+    ["Gaming Laptop", "Assets/images (2).jpeg", "₦680,000"],
+    ["Desktop Laptop", "Assets/images (3).jpeg", "₦520,000"],
+    ["Red Sports Car", "Assets/images (29).jpeg", "₦18,500,000"],
+    ["Modern Sedan", "Assets/images (38).jpeg", "₦12,800,000"],
+    ["Luxury Sports Car", "Assets/images (39).jpeg", "₦24,000,000"],
+    ["Sport Utility Vehicle", "Assets/images (40).jpeg", "₦14,900,000"],
+    ["Smartphone", "Assets/images (5).jpeg", "₦310,000"],
+    ["Premium Smartphone", "Assets/images (6).jpeg", "₦390,000"],
+    ["Flagship Smartphone", "Assets/images (7).jpeg", "₦480,000"],
+    ["Burgundy Cotton T-Shirt", "Assets/images (8).jpeg", "₦12,500"],
+    ["Green Casual T-Shirt", "Assets/images (9).jpeg", "₦11,500"],
+    ["Graphic T-Shirt", "Assets/images (10).jpeg", "₦14,000"],
+    ["Classic T-Shirt Set", "Assets/images (11).jpeg", "₦18,500"],
+    ["Red Shorts", "Assets/images (15).jpeg", "₦9,500"],
+    ["Grey Casual Shorts", "Assets/images (12).jpeg", "₦10,500"],
+    ["Green Casual Shorts", "Assets/images (13).jpeg", "₦10,500"],
+    ["Camouflage Shorts", "Assets/images (14).jpeg", "₦13,500"],
+    ["Gaming Controller", "Assets/images (16).jpeg", "₦19,500"],
+    ["Wireless Game Controller", "Assets/images (17).jpeg", "₦27,500"],
+    ["Premium Game Controller", "Assets/images (18).jpeg", "₦32,000"],
+    ["PlayStation Controller", "Assets/images (19).jpeg", "₦24,000"],
+    ["RGB Gaming Controller", "Assets/images (4).jpeg", "₦35,000"],
+    ["Mechanical Gaming Keyboard", "Assets/images (21).jpeg", "₦28,500"],
+    ["RGB Gaming Keyboard", "Assets/images (22).jpeg", "₦31,500"],
+    ["LED Gaming Keyboard", "Assets/images (20).jpeg", "₦26,000"],
+    ["Gaming Mouse", "Assets/images (23).jpeg", "₦18,500"],
+    ["RGB Gaming Mouse", "Assets/images (24).jpeg", "₦22,500"],
+    ["Professional Gaming Mouse", "Assets/images (25).jpeg", "₦29,000"],
+    ["Orange Wireless Mouse", "Assets/images (26).jpeg", "₦16,500"],
+    ["Basketball", "Assets/images (28).jpeg", "₦14,500"],
+    ["Basketball", "Assets/images (28).jpeg", "₦11,500"],
+    ["Football", "Assets/images (27).jpeg", "₦13,500"],
+    ["Volleyball", "Assets/images (30).jpeg", "₦12,500"],
+    ["Football Goal Set", "Assets/images (31).jpeg", "₦85,000"],
+    ["Portable Football Goal", "Assets/images (32).jpeg", "₦72,000"],
+    ["Makeup Brush Set", "Assets/images (33).jpeg", "₦8,500"],
+    ["Cosmetics Gift Set", "Assets/images (34).jpeg", "₦21,500"],
+    ["Body Care Gift Set", "Assets/images (35).jpeg", "₦24,500"],
+    ["Fashion Sneakers", "Assets/images (36).jpeg", "₦30,000"],
+    ["Leather Hiking Boots", "Assets/images (37).jpeg", "₦42,500"],
+    ["Fashion Clothing Collection", "Assets/images (41).jpeg", "₦55,000"],
+    ["Beauty Products Collection", "Assets/images (42).jpeg", "₦18,000"],
+    ["Ladies Fashion Outfit", "Assets/images (43).jpeg", "₦35,500"],
+];
+
+const assetProductsContainer = document.getElementById("asset-products");
+if (assetProductsContainer) {
+    assetProducts.forEach(function (product) {
+        const card = document.createElement("div");
+        card.className = "product-card";
+
+        const imageContainer = document.createElement("div");
+        imageContainer.className = "product-image";
+
+        const image = document.createElement("img");
+        image.src = product[1];
+        image.alt = product[0];
+        imageContainer.appendChild(image);
+
+        const name = document.createElement("h3");
+        name.textContent = product[0];
+
+        const price = document.createElement("p");
+        price.className = "price";
+        price.textContent = product[2];
+
+        card.append(imageContainer, name, price);
+        assetProductsContainer.appendChild(card);
+    });
+}
+
 document.querySelectorAll(".product-card").forEach(function (product, index) {
     const button = document.createElement("button");
     button.type = "button";
